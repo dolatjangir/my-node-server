@@ -3,6 +3,7 @@ const user = require("./user/get")
 const router = new Router();
 
 router.get("/user/list", user.GetUser);
-router.post("/user", user.AddNewUser);
+router.post("/user/signup", user.AddNewUser);
+router.post("/user/login", user.UserLogin);
 
 module.exports = router;
