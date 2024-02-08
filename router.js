@@ -1,7 +1,8 @@
 const Router = require("koa-router");
+const user = require("./user/get")
 const router = new Router();
 
-router.get("/events_list", (ctx) => (ctx.body = "Events List!"));
-router.post("/add_event", (ctx) => (ctx.body = "Event Posted!"));
+router.get("/user/list", user.GetUser);
+router.post("/user", user.AddNewUser);
 
 module.exports = router;
